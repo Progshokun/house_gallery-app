@@ -1,0 +1,120 @@
+.header {
+  background-color: var(--color-base);
+
+  @include mobile-s {
+    background-color: var(--color-light);
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 38px;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 0;
+    }
+  }
+
+  &__logo {
+    margin-right: auto;
+
+    @include mobile {
+      margin-left: auto;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+
+    @include mobile {
+      &::after {
+        content: "";
+        position: absolute;
+        left: -15px;
+        right: -15px;
+        height: 100%;
+        background-color: var(--color-base);
+        z-index: -1;
+      }
+
+      width: 100%;
+      border-top: 1px solid var(--color-gray-alt);
+      padding-block: 16px;
+      justify-content: center;
+    }
+
+    @include mobile-s {
+      justify-content: space-between;
+      border: none;
+    }
+  }
+
+  &__burger-button {
+    display: none;
+  }
+
+  &__menu {
+    margin-right: 60px;
+
+    @include tablet {
+      margin-right: 40px;
+    }
+
+    @include mobile-s {
+      position: absolute;
+      background-color: var(--color-base);
+      padding: 15px;
+      padding-top: 60px;
+      left: -15px;
+      top: 0;
+      height: 100vh;
+      width: 100vw;
+      transform: translateX(-150%);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &--active {
+      transform: translateX(0);
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: 60px;
+
+    @include tablet {
+      column-gap: 30px;
+    }
+
+    @include mobile-s {
+      display: block;
+    }
+  }
+
+  &__item {
+    @include mobile-s {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__cart {
+    @include flex-center(true);
+    @include square(35px);
+
+    transition-duration: var(--transition-duration);
+
+    svg {
+      @include hover {
+        color: var(--color-green);
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+@import "reset", "fonts", "mixins", "media", "variables", "utils", "globals";
+
+@import "blocks/header", "blocks/burger-button", "blocks/mobile-overlay",
+  "blocks/cross-button", "blocks/hero", "blocks/catalog", "blocks/products",
+  "blocks/promo", "blocks/team", "blocks/footer";

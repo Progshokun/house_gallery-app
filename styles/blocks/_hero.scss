@@ -1,0 +1,73 @@
+.hero {
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 30px;
+
+    @include tablet {
+      padding-block: 50px;
+    }
+
+    @include mobile-s {
+      padding-block: 60px;
+    }
+  }
+
+  &__image {
+    object-fit: contain;
+
+    @include desktop {
+      width: 470px;
+    }
+
+    @include tablet {
+      width: 330px;
+      height: 380px;
+    }
+
+    @include mobile {
+      width: 195px;
+      height: 239px;
+    }
+
+    @include mobile-s {
+      display: none;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 540px;
+
+    span {
+      color: var(--color-green);
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    color: var(--color-gray);
+    margin-bottom: 60px;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
+    @include mobile {
+      margin-bottom: 10px;
+    }
+
+    @include mobile-s {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__button {
+    color: var(--color-green);
+    border: var(--border-green);
+  }
+}

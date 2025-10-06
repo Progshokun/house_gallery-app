@@ -1,0 +1,27 @@
+:root {
+  --color-base: #d4e8d9;
+  --color-light: #ffffff;
+  --color-light-alt: #f4f6f5;
+  --color-dark: #2c2d35;
+  --color-gray: #86928b;
+  --color-gray-alt: #c3d1c6;
+  --color-green: #598d66;
+  --color-green-alt: #376b44;
+  --color-yellow: #eedb6d;
+  --color-yellow-hover: #faeb97;
+  --color-yellow-active: #a38314;
+
+  --border-green: 1px solid var(--color-base);
+  --border-green-alt: 1px solid var(--color-green);
+  --border-gray: 1px solid var(var(--color-gray-alt));
+
+  --container-width: 1110px;
+  --container-padding-x: 15px;
+  --section-padding-y: 70px;
+
+  --transition-duration: 0.2s;
+
+  --button-height: 65px;
+
+  --font-family-base: "Raleway", sans-serif;
+}

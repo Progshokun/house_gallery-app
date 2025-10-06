@@ -1,0 +1,46 @@
+.team {
+  padding-block: 70px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 30px;
+
+    @include tablet {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding-top: 40px;
+    width: 100%;
+
+    @include tablet {
+      max-width: 690px;
+    }
+  }
+
+  &__title {
+  }
+
+  &__description {
+  }
+
+  &__photo {
+    display: flex;
+    column-gap: 30px;
+  }
+}
+.container {
+}

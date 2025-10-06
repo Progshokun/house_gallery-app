@@ -1,0 +1,45 @@
+.catalog {
+  padding-block: 70px;
+
+  @include mobile {
+    padding-block: 50px;
+  }
+
+  @include mobile-s {
+    padding-block: 60px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  &__menu-buttons {
+    display: flex;
+    column-gap: 32px;
+    overflow-x: auto;
+  }
+
+  &__button {
+    padding: 10px 20px;
+    background-color: var(--color-base);
+    border-radius: 20px;
+
+    @include hover {
+      color: var(--color-light-alt);
+      background-color: var(--color-green);
+    }
+
+    &:focus {
+      border: var(--border-green-alt);
+    }
+
+    &--active {
+      color: var(--color-light-alt);
+      background-color: var(--color-green-alt);
+    }
+  }
+}

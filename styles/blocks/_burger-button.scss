@@ -1,0 +1,50 @@
+.burger-button {
+  @include square(21px);
+  @include reset-button;
+
+  position: relative;
+  transition-duration: var(--transition-duration);
+  z-index: 1;
+
+  @include hover {
+    background-color: var(--color-base);
+    transition-duration: var(--transition-duration);
+  }
+
+  &::after {
+    @include abs-center;
+
+    content: "";
+    background-color: var(--color-dark);
+    height: 2px;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0 8px, 0 -8px;
+  }
+
+  &--active {
+    z-index: 100;
+  }
+
+  &--active::before {
+    @include abs-center;
+
+    content: "";
+    height: 2px;
+    background-color: var(--color-dark);
+    width: 100%;
+    border-radius: 10px;
+    rotate: -45deg;
+  }
+
+  &--active::after {
+    rotate: 45deg;
+    box-shadow: 0 0;
+    transition-duration: var(--transition-duration);
+  }
+
+  &:focus {
+    color: var(--color-dark);
+    background-color: var(--color-base);
+  }
+}

@@ -1,0 +1,97 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+a {
+  @include fluid-text(20, 18);
+
+  text-decoration: none;
+  color: inherit;
+  transition-duration: var(--transition-duration);
+
+  svg:hover {
+    @include hover {
+      stroke: var(--color-green);
+    }
+  }
+
+  @include hover {
+    transition-duration: var(--transition-duration);
+    color: var(--color-green);
+  }
+
+  &:active {
+    color: var(--color-green);
+  }
+
+  &:focus {
+    background-color: var(--color-base);
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  @include fluid-text(20, 18);
+
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+  padding: 21px 60px;
+  cursor: pointer;
+
+  @include hover {
+    color: var(--color-light-alt);
+    background-color: var(--color-green);
+    transition-duration: var(--transition-duration);
+  }
+
+  &:focus {
+    color: var(--color-green);
+    background-color: var(--color-base);
+  }
+}
+
+body {
+  @include fluid-text(18, 14);
+
+  font-family: var(--font-family-base);
+  line-height: 1.5;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+
+h1,
+.h1,
+h2,
+.h2 {
+  line-height: 1.1;
+}
+
+h1,
+.h1 {
+  @include fluid-text(60, 30);
+}
+
+h2,
+.h2 {
+  @include fluid-text(40, 24);
+}
+
+h3,
+.h3 {
+  @include fluid-text(30, 24);
+}
+
+h4,
+.h4 {
+  @include fluid-text(20, 16);
+}
